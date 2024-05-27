@@ -1,0 +1,29 @@
+<html>
+<head><title>uso de formularios</title>
+</head>
+<body>
+<form action="guardar.asp"method="post">
+NOMBRE:<input type="text" name="txtnombre">
+<br>
+APELLIDOS:<input type="text" name="txtnombre">
+<br>
+SEXO:<br>
+masculino<input type="radio" name="rsexo" value="M">
+femenino<input type="radio" name="rsexo" value="F">
+<br>
+<select name ="fpago" muktisize="4">
+<option>efectivo
+<option>transferencia
+<option>deposito
+<option>cheque
+</select>
+<br>
+comentarios:<br>
+<textarea name="txtcom" rows="8"cols="50">
+</textarea>
+<input type="submit" value="guardar">
+<input type="reset" value="borrar">
+
+</form>
+</body>
+</html>

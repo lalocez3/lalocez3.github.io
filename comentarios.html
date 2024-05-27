@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejemplo de estilos CSS en un archivo externo</title>
+<link rel="stylesheet" type="text/css" href="formulario.css" media="screen" />
+</head>
+<body>
+<form action="INSERTAR.asp" method="post" >
+    <fieldset>
+         <h2>Comentarion del Usuario:</h2>
+         <ul>
+              <li>
+                   <label id="Usuario" for="Usuario">Nombre del usuario:</label>
+                   <input class="input" id="Usuario" name ="usuario" type="text"required width="300px">
+             </li>
+             
+                          <li>
+                   <label id="Correo" for="Correo">E-mail de contacto:</label>
+                   <input class="input" id="Correo" type="text" name="correo" placeholder="xxx@gmail.com" required 
+                   pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+             </li>
+             <li>
+                   <label id="Coments" for="Coments">Comentario:<span></span></label>
+                   <textarea class="input" id="Coments" name="coments" cols="30" rows="50" placeholder="Escribe tu Comentario..."></textarea>
+            </li>
+                       <li>
+                  <label for="Enviar"></label>
+                  <button style="background-color: rgb(0, 225, 255) ;" type="submit">ENVIAR</button>
+            </li>
+            <li>
+                  <label for="Borrar"></label>
+                  <button style="background-color: rgb(255, 0, 76) ;" type="submit">BORRAR</button>
+            </li>
+      </ul>
+   </fieldset>
+</form>
+<script src="validacion_formulario.js"></script>
+</body>
+</html>

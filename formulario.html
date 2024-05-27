@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejemplo de estilos CSS en un archivo externo</title>
+<link rel="stylesheet" type="text/css" href="formulario.css" media="screen" />
+</head>
+<body>
+<form action="INSERTAR2.asp" method="post">
+    <fieldset>
+         <h2>Rellenar formulario completo:</h2>
+         <ul>
+              <li>
+                   <label id="Nombre" for="Nombre">Nombre:</label>
+                   <input class="input" id="Nombre" name="nombre" type="text"required width="300px">
+             </li>
+             <li>
+                   <label id="primer" for="primer">Primer Apellido:</label>
+                   <input class="input" id="primer" name="primera" type="text"required width="300px">
+             </li>
+             <li>
+                   <label id="Segundo" for="Segundo">Segundo Apellido:</label>
+                   <input class="input" id="Segundo" name="segundoa" type="text" required width="300px">
+             </li>
+             <li>
+                   <label id="mail" for="mail">E-mail de contacto:</label>
+                   <input class="input" id="mail" type="text" name="email" placeholder="xxx@gmail.com" required 
+                   pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+             </li>
+             <li>
+                   <label id="Mensaje" for="Mensaje">Mensaje:<span>*describe tu consulta</span></label>
+                   <textarea class="input" id="Mensaje" name="Mensaje" cols="30" rows="50" placeholder="Escribe tu mensaje..."></textarea>
+            </li>
+            <li>
+                  <div class="checkbox">
+                       <input id="check" type="checkbox" required >
+                       <a href="#">He leido y acepto la politica de privacidad</a>
+                  </div>
+            </li>
+            <li>
+                  <label for="contactar"></label>
+                  <button style="background-color: rgb(0, 225, 255) ;" type="submit">CONTACTAR</button>
+            </li>
+            <li>
+                  <label for="reset"></label>
+                  <button style="background-color: rgb(255, 0, 76) ;" type="submit">Reiniciar</button>
+            </li>
+      </ul>
+   </fieldset>
+</form>
+<script src="validacion_formulario.js"></script>
+</body>
+</html>

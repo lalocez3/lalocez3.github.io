@@ -1,0 +1,23 @@
+<html>
+<body>
+<%@ LANGUAGE="VBSCRIPT" %>
+<%
+option explicit
+Dim conn,nombre,segundoa,primera,email,mensajes
+
+nombre=Request.Form("nombre")
+primera=Request.Form("primer apellido")
+segundoa=Request.Form("segundo apellido")
+email=Request.Form("e-mail")
+mensajes=Request.Form("mensajes")
+
+set conn=Server.CreateObject("ADODB.Connection")
+conn.open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Carlos Chavez\Documents\cqrrillo\compras.mdb" 
+conn.execute "INSERT INTO formulario(nombre,primera,segundoa,email,mensajes) values('" & nombre & "','" & primera & "','" & segundoa & "','" & email &  "','" & mensajes & "')"
+conn.close
+set conn=nothing
+response.redirect("formulario.html")
+
+%>
+</body>
+</html>
